@@ -1,0 +1,15 @@
+//
+//  TAKAlertSample-PrefixHeader.pch
+//  TAKAlertSample
+//
+//  Created by 西村 拓 on 2015/07/27.
+//  Copyright (c) 2015年 TakuNishimura. All rights reserved.
+//
+
+#ifndef TAKAlertSample_TAKAlertSample_PrefixHeader_pch
+#define TAKAlertSample_TAKAlertSample_PrefixHeader_pch
+
+/** RAC **/
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
+#endif
