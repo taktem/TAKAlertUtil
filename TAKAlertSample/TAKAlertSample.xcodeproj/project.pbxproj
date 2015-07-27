@@ -244,6 +244,7 @@
 				F4181DCD1B65D0BD002A58B5 /* Sources */,
 				F4181DCE1B65D0BD002A58B5 /* Frameworks */,
 				F4181DCF1B65D0BD002A58B5 /* Resources */,
+				F4181E4D1B65F598002A58B5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -386,6 +387,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F4181E4D1B65F598002A58B5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "git submodule update --init --recursive";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4181DCD1B65D0BD002A58B5 /* Sources */ = {
