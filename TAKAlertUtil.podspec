@@ -13,9 +13,11 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.homepage     = "https://github.com/taktem/TAKAlertUtil"
   s.author       = { "SOMTD" => "totem.kc[at]me.com" }
-  s.source       = { :git => "https://github.com/taktem/TAKAlertUtil.git", :tag => s.version}
+  s.source       = {
+    :git => "https://github.com/taktem/TAKAlertUtil.git", :tag => s.version,
+    :git => 'https://github.com/yusefnapora/ReactiveCocoa.git', :commit => '9c9912f64e994af45a9adbb6306d2a101f2cbbe3'
+    }
   s.platform     = :ios, '7.0'
   s.requires_arc = true
   s.source_files = 'TAKAlertUtil/**/*.{h,m}'
-  s.dependency 'libextobjc'
 end
