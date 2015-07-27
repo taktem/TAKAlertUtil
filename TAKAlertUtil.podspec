@@ -13,9 +13,10 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.homepage     = "https://github.com/taktem/TAKAlertUtil"
   s.author       = { "SOMTD" => "totem.kc[at]me.com" }
-  s.source       = { :git => "https://github.com/taktem/TAKAlertUtil.git", :tag => s.version, :submodules => true }
+  s.source       = { :git => "https://github.com/taktem/TAKAlertUtil.git", :tag => s.version}
   s.platform     = :ios, '7.0'
   s.requires_arc = true
   s.source_files = 'TAKAlertUtil/**/*.{h,m}'
   #s.resources    = 'TAKAlertUtil/**/*.xib'
+  s.compiler_flags = '-fmodules'
 end

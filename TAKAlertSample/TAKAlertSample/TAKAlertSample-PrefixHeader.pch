@@ -9,8 +9,7 @@
 #ifndef TAKAlertSample_TAKAlertSample_PrefixHeader_pch
 #define TAKAlertSample_TAKAlertSample_PrefixHeader_pch
 
-/** RAC **/
-#import <ReactiveCocoa/ReactiveCocoa.h>
-#import <ReactiveCocoa/EXTScope.h>
+/** Util **/
+#import "TAKAlertUtil.h"
 
 #endif

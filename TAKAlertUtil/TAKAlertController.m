@@ -79,24 +79,22 @@
  */
 - (UIAlertAction *)addActionWithTitle:(NSString *)title
                                 index:(int)index {
-    @weakify(self)
+    __weak typeof(self) weakSelf = self;
     return [UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        @strongify(self)
-        
         if (self.clickButtonBlock) {
-            self.clickButtonBlock(self, index);
+            self.clickButtonBlock(weakSelf, index);
         }
         
-        self.strongSelf = nil;
+        weakSelf.strongSelf = nil;
         
         // 用済みのWindowをころす
-        [self.window.rootViewController.view removeFromSuperview];
-        self.window.rootViewController = nil;
+        [weakSelf.window.rootViewController.view removeFromSuperview];
+        weakSelf.window.rootViewController = nil;
         
         // 制御をアプリケーションメインWindowに戻す
         [[[UIApplication sharedApplication].delegate window] makeKeyAndVisible];
         
-        self.window = nil;
+        weakSelf.window = nil;
     }];
 }
 
