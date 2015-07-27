@@ -69,14 +69,14 @@
     TAKAlertUtil *alert = [TAKAlertUtil new];
     
     // 8.0以上はAlert Controllerを使う
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 8.0) {
-        return [alert showAlertViewWithTitle:title
-                                    message:message
-                               buttonTitles:buttonTitles];
-    } else {
+    if ([UIAlertController class]) {
         return [alert showAlertControllerWithTitle:title
                                            message:message
                                       buttonTitles:buttonTitles];
+    } else {
+        return [alert showAlertViewWithTitle:title
+                                     message:message
+                                buttonTitles:buttonTitles];
     }
 }
 
