@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 
+/** Util **/
+#import "TAKAlertUtil.h"
+
 @interface ViewController ()
 
 @property (nonatomic) int selectedIndex;
@@ -23,17 +26,17 @@
 }
 
 - (IBAction)showButtonTapped:(UIButton *)sender {
-    __weak typeof(self) weakSelf = self;
-    [TAKAlertUtil showWithTitle:@"Title"
+    @weakify(self)
+    [[TAKAlertUtil showWithTitle:@"Title"
                         message:@"Message Test"
-                   buttonTitles:@[@"Cancel",@"OK"]
-                  buttonHandler:^(TAKAlertUtil *alertView, NSInteger index) {
-                      if (index > 0) {
-                          weakSelf.resultLabel.text = @"OK";
-                      } else {
-                          weakSelf.resultLabel.text = @"Cancel";
-                      }
-                  }];
+                   buttonTitles:@[@"Cancel",@"OK"]] subscribeNext:^(id x) {
+        @strongify(self)
+        if ([x intValue] > 0) {
+            self.resultLabel.text = @"OK";
+        } else {
+            self.resultLabel.text = @"Cancel";
+        }
+    }];
 }
 
 @end

@@ -24,6 +24,9 @@
 
 #import <Foundation/Foundation.h>
 
+/** RAC **/
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
 @interface TAKAlertUtil : NSObject
 
 /**
@@ -33,9 +36,8 @@
  *  @param message      本文
  *  @param buttonTitles ボタンタイトル配列
  */
-+ (void)showWithTitle:(NSString *)title
++ (RACSignal *)showWithTitle:(NSString *)title
               message:(NSString *)message
-         buttonTitles:(NSArray *)buttonTitles
-        buttonHandler:(void (^)(TAKAlertUtil*alertView, NSInteger index))buttonHandler;
+         buttonTitles:(NSArray *)buttonTitles;
 
 @end

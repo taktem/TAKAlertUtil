@@ -29,11 +29,11 @@
 
 @interface TAKAlertUtil()
 
-/// ボタンコールバック保持用
-@property (copy, nonatomic) void (^clickButtonBlock)(id, NSInteger);
-
 /// Retainカウント保持用に、自分を強参照
 @property (strong, nonatomic) TAKAlertUtil *strongSelf;
+
+/// コールバック参照保持用
+@property (strong, nonatomic) id<RACSubscriber> subscriber;
 
 @end
 
@@ -48,7 +48,8 @@
  *  @param buttonIndex 押下されたボタンインデックス
  */
 - (void)alertCallBack:(id)alert clickedButtonAtIndex:(NSInteger)buttonIndex{
-    self.clickButtonBlock(self, buttonIndex);
+    [self.subscriber sendNext:@(buttonIndex)];
+    [self.subscriber sendCompleted];
 }
 
 #pragma mark - Control
@@ -60,14 +61,12 @@
  *  @param message      本文
  *  @param buttonTitles ボタンタイトル配列
  */
-+ (void)showWithTitle:(NSString *)title
-              message:(NSString *)message
-         buttonTitles:(NSArray *)buttonTitles
-        buttonHandler:(void (^)(TAKAlertUtil *, NSInteger))buttonHandler {
++ (RACSignal *)showWithTitle:(NSString *)title
+                     message:(NSString *)message
+                buttonTitles:(NSArray *)buttonTitles {
+    
     
     TAKAlertUtil *alert = [TAKAlertUtil new];
-    
-    alert.clickButtonBlock = buttonHandler;
     
     // 8.0以上はAlert Controllerを使う
     if ([UIAlertController class]) {
@@ -87,22 +86,34 @@
  *  @param title        タイトル
  *  @param message      メッセージ
  *  @param buttonTitles ボタンタイトル配列
+ *
+ *  @return RAC
  */
-- (void)showAlertViewWithTitle:(NSString *)title
-                       message:(NSString *)message
-                  buttonTitles:(NSArray *)buttonTitles {
+- (RACSignal *)showAlertViewWithTitle:(NSString *)title
+                              message:(NSString *)message
+                         buttonTitles:(NSArray *)buttonTitles {
+    @weakify(self)
     
     self.strongSelf = self;
-    
-    __weak typeof(self) weakSelf = self;
     [TAKAlertView showWithTitle:title
                         message:message
                    buttonTitles:buttonTitles
                   buttonHandler:^(UIAlertView *alertView, NSInteger index) {
-                      [weakSelf alertCallBack:alertView clickedButtonAtIndex:index];
+                      @strongify(self)
+                      [self alertCallBack:alertView clickedButtonAtIndex:index];
                       
-                      weakSelf.strongSelf = nil;
+                      self.strongSelf = nil;
                   }];
+    
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        @strongify(self)
+        self.subscriber = subscriber;
+        
+        return [RACDisposable disposableWithBlock:^{
+            @strongify(self)
+            self.subscriber = nil;
+        }];
+    }];
 }
 
 /**
@@ -111,22 +122,34 @@
  *  @param title        タイトル
  *  @param message      メッセージ
  *  @param buttonTitles ボタンタイトル配列
+ *
+ *  @return RAC
  */
-- (void)showAlertControllerWithTitle:(NSString *)title
-                             message:(NSString *)message
-                        buttonTitles:(NSArray *)buttonTitles {
+- (RACSignal *)showAlertControllerWithTitle:(NSString *)title
+                                    message:(NSString *)message
+                               buttonTitles:(NSArray *)buttonTitles {
+    @weakify(self)
     
     self.strongSelf = self;
-    
-    __weak typeof(self) weakSelf = self;
     [TAKAlertController showWithTitle:title
                               message:message
                          buttonTitles:buttonTitles
                         buttonHandler:^(UIAlertController *alertController, NSInteger index) {
-                            [weakSelf alertCallBack:alertController clickedButtonAtIndex:index];
+                            @strongify(self)
+                            [self alertCallBack:alertController clickedButtonAtIndex:index];
                             
-                            weakSelf.strongSelf = nil;
+                            self.strongSelf = nil;
                         }];
+    
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        @strongify(self)
+        self.subscriber = subscriber;
+        
+        return [RACDisposable disposableWithBlock:^{
+            @strongify(self)
+            self.subscriber = nil;
+        }];
+    }];
 }
 
 @end

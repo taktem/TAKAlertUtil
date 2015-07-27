@@ -2,4 +2,4 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '7.0'
 
-pod 'TAKAlertUtil', :podspec => 'https://raw.githubusercontent.com/taktem/TAKAlertUtil/master/TAKAlertUtil.podspec'
+pod 'ReactiveCocoa', '~> 2.5'
