@@ -13,76 +13,15 @@
 		F4181DE01B65D0BE002A58B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4181DDE1B65D0BE002A58B5 /* Main.storyboard */; };
 		F4181DE21B65D0BE002A58B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4181DE11B65D0BE002A58B5 /* Images.xcassets */; };
 		F4181DE51B65D0BE002A58B5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4181DE31B65D0BE002A58B5 /* LaunchScreen.xib */; };
-		F4181DF11B65D0BE002A58B5 /* TAKAlertSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4181DF01B65D0BE002A58B5 /* TAKAlertSampleTests.m */; };
 		F4181E111B65D1C2002A58B5 /* TAKAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4181E0C1B65D1C2002A58B5 /* TAKAlertController.m */; };
 		F4181E121B65D1C2002A58B5 /* TAKAlertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F4181E0E1B65D1C2002A58B5 /* TAKAlertUtil.m */; };
 		F4181E131B65D1C2002A58B5 /* TAKAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4181E101B65D1C2002A58B5 /* TAKAlertView.m */; };
-		F4181E4C1B65F4C9002A58B5 /* libReactiveCocoa-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4181E411B65F4C4002A58B5 /* libReactiveCocoa-iOS.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F4181DEB1B65D0BE002A58B5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F4181DC91B65D0BD002A58B5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F4181DD01B65D0BD002A58B5;
-			remoteInfo = TAKAlertSample;
-		};
-		F4181E3E1B65F4C4002A58B5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F4181E341B65F4C4002A58B5 /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 88037F8315056328001A5B19;
-			remoteInfo = ReactiveCocoa;
-		};
-		F4181E401B65F4C4002A58B5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F4181E341B65F4C4002A58B5 /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 88F440AB153DAC820097B4C3;
-			remoteInfo = "ReactiveCocoa-iOS";
-		};
-		F4181E421B65F4C4002A58B5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F4181E341B65F4C4002A58B5 /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 88CDF7DC15000FCF00163A9F;
-			remoteInfo = ReactiveCocoaTests;
-		};
-		F4181E441B65F4C4002A58B5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F4181E341B65F4C4002A58B5 /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5FAF5223174D4C2000CAC810;
-			remoteInfo = "ReactiveCocoaTests-iOS";
-		};
-		F4181E461B65F4C4002A58B5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F4181E341B65F4C4002A58B5 /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1860F412177C91B500C7B3C9;
-			remoteInfo = "ReactiveCocoa-iOS-UIKitTestHost";
-		};
-		F4181E481B65F4C4002A58B5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F4181E341B65F4C4002A58B5 /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1860F430177C91B500C7B3C9;
-			remoteInfo = "ReactiveCocoa-iOS-UIKitTestHostTests";
-		};
-		F4181E4A1B65F4C4002A58B5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F4181E341B65F4C4002A58B5 /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D05AD39417F2D56F0080895B;
-			remoteInfo = "ReactiveCocoa-Mac";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		041FA25D9403B22C458FA8FF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		513E7119E994D0BEDBE0462F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		9AB50C1F57F3DE94FCF180D7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		415BC7B55A6C466A9AF24709 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E60A142303D698FEF3C5A49F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F4181DD11B65D0BD002A58B5 /* TAKAlertSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TAKAlertSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4181DD51B65D0BD002A58B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4181DD61B65D0BD002A58B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -93,9 +32,6 @@
 		F4181DDF1B65D0BE002A58B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4181DE11B65D0BE002A58B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F4181DE41B65D0BE002A58B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		F4181DEA1B65D0BE002A58B5 /* TAKAlertSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TAKAlertSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4181DEF1B65D0BE002A58B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4181DF01B65D0BE002A58B5 /* TAKAlertSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAKAlertSampleTests.m; sourceTree = "<group>"; };
 		F4181E091B65D175002A58B5 /* TAKAlertSample-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TAKAlertSample-PrefixHeader.pch"; sourceTree = "<group>"; };
 		F4181E0B1B65D1C2002A58B5 /* TAKAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAKAlertController.h; sourceTree = "<group>"; };
 		F4181E0C1B65D1C2002A58B5 /* TAKAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAKAlertController.m; sourceTree = "<group>"; };
@@ -103,19 +39,10 @@
 		F4181E0E1B65D1C2002A58B5 /* TAKAlertUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAKAlertUtil.m; sourceTree = "<group>"; };
 		F4181E0F1B65D1C2002A58B5 /* TAKAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAKAlertView.h; sourceTree = "<group>"; };
 		F4181E101B65D1C2002A58B5 /* TAKAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAKAlertView.m; sourceTree = "<group>"; };
-		F4181E341B65F4C4002A58B5 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F4181DCE1B65D0BD002A58B5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F4181E4C1B65F4C9002A58B5 /* libReactiveCocoa-iOS.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F4181DE71B65D0BE002A58B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,15 +52,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A944008C7D581F0349D0B5A4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9AB50C1F57F3DE94FCF180D7 /* Pods.debug.xcconfig */,
-				513E7119E994D0BEDBE0462F /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		D0B90789C7652EB105042F10 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,15 +60,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D13E3F7A5DE44760D695490A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				415BC7B55A6C466A9AF24709 /* Pods.debug.xcconfig */,
+				E60A142303D698FEF3C5A49F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F4181DC81B65D0BD002A58B5 = {
 			isa = PBXGroup;
 			children = (
-				F4181E341B65F4C4002A58B5 /* ReactiveCocoa.xcodeproj */,
 				F4181DD31B65D0BD002A58B5 /* TAKAlertSample */,
-				F4181DED1B65D0BE002A58B5 /* TAKAlertSampleTests */,
 				F4181DD21B65D0BD002A58B5 /* Products */,
-				A944008C7D581F0349D0B5A4 /* Pods */,
 				D0B90789C7652EB105042F10 /* Frameworks */,
+				D13E3F7A5DE44760D695490A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				F4181DD11B65D0BD002A58B5 /* TAKAlertSample.app */,
-				F4181DEA1B65D0BE002A58B5 /* TAKAlertSampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -189,23 +113,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F4181DED1B65D0BE002A58B5 /* TAKAlertSampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				F4181DF01B65D0BE002A58B5 /* TAKAlertSampleTests.m */,
-				F4181DEE1B65D0BE002A58B5 /* Supporting Files */,
-			);
-			path = TAKAlertSampleTests;
-			sourceTree = "<group>";
-		};
-		F4181DEE1B65D0BE002A58B5 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F4181DEF1B65D0BE002A58B5 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		F4181E0A1B65D1C2002A58B5 /* TAKAlertUtil */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,20 +125,6 @@
 			);
 			name = TAKAlertUtil;
 			path = ../../TAKAlertUtil;
-			sourceTree = "<group>";
-		};
-		F4181E351B65F4C4002A58B5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F4181E3F1B65F4C4002A58B5 /* ReactiveCocoa.framework */,
-				F4181E411B65F4C4002A58B5 /* libReactiveCocoa-iOS.a */,
-				F4181E431B65F4C4002A58B5 /* ReactiveCocoaTests.octest */,
-				F4181E451B65F4C4002A58B5 /* ReactiveCocoaTests-iOS.octest */,
-				F4181E471B65F4C4002A58B5 /* ReactiveCocoa-iOS-UIKitTestHost.app */,
-				F4181E491B65F4C4002A58B5 /* ReactiveCocoa-iOS-UIKitTestHostTests.octest */,
-				F4181E4B1B65F4C4002A58B5 /* libReactiveCocoa-Mac.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,24 +148,6 @@
 			productReference = F4181DD11B65D0BD002A58B5 /* TAKAlertSample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F4181DE91B65D0BE002A58B5 /* TAKAlertSampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F4181DF71B65D0BE002A58B5 /* Build configuration list for PBXNativeTarget "TAKAlertSampleTests" */;
-			buildPhases = (
-				F4181DE61B65D0BE002A58B5 /* Sources */,
-				F4181DE71B65D0BE002A58B5 /* Frameworks */,
-				F4181DE81B65D0BE002A58B5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F4181DEC1B65D0BE002A58B5 /* PBXTargetDependency */,
-			);
-			name = TAKAlertSampleTests;
-			productName = TAKAlertSampleTests;
-			productReference = F4181DEA1B65D0BE002A58B5 /* TAKAlertSampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -284,10 +159,6 @@
 				TargetAttributes = {
 					F4181DD01B65D0BD002A58B5 = {
 						CreatedOnToolsVersion = 6.4;
-					};
-					F4181DE91B65D0BE002A58B5 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = F4181DD01B65D0BD002A58B5;
 					};
 				};
 			};
@@ -302,71 +173,12 @@
 			mainGroup = F4181DC81B65D0BD002A58B5;
 			productRefGroup = F4181DD21B65D0BD002A58B5 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = F4181E351B65F4C4002A58B5 /* Products */;
-					ProjectRef = F4181E341B65F4C4002A58B5 /* ReactiveCocoa.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				F4181DD01B65D0BD002A58B5 /* TAKAlertSample */,
-				F4181DE91B65D0BE002A58B5 /* TAKAlertSampleTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		F4181E3F1B65F4C4002A58B5 /* ReactiveCocoa.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ReactiveCocoa.framework;
-			remoteRef = F4181E3E1B65F4C4002A58B5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F4181E411B65F4C4002A58B5 /* libReactiveCocoa-iOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libReactiveCocoa-iOS.a";
-			remoteRef = F4181E401B65F4C4002A58B5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F4181E431B65F4C4002A58B5 /* ReactiveCocoaTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ReactiveCocoaTests.octest;
-			remoteRef = F4181E421B65F4C4002A58B5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F4181E451B65F4C4002A58B5 /* ReactiveCocoaTests-iOS.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "ReactiveCocoaTests-iOS.octest";
-			remoteRef = F4181E441B65F4C4002A58B5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F4181E471B65F4C4002A58B5 /* ReactiveCocoa-iOS-UIKitTestHost.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "ReactiveCocoa-iOS-UIKitTestHost.app";
-			remoteRef = F4181E461B65F4C4002A58B5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F4181E491B65F4C4002A58B5 /* ReactiveCocoa-iOS-UIKitTestHostTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "ReactiveCocoa-iOS-UIKitTestHostTests.octest";
-			remoteRef = F4181E481B65F4C4002A58B5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F4181E4B1B65F4C4002A58B5 /* libReactiveCocoa-Mac.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libReactiveCocoa-Mac.a";
-			remoteRef = F4181E4A1B65F4C4002A58B5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F4181DCF1B65D0BD002A58B5 /* Resources */ = {
@@ -376,13 +188,6 @@
 				F4181DE01B65D0BE002A58B5 /* Main.storyboard in Resources */,
 				F4181DE51B65D0BE002A58B5 /* LaunchScreen.xib in Resources */,
 				F4181DE21B65D0BE002A58B5 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F4181DE81B65D0BE002A58B5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,23 +223,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F4181DE61B65D0BE002A58B5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F4181DF11B65D0BE002A58B5 /* TAKAlertSampleTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F4181DEC1B65D0BE002A58B5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F4181DD01B65D0BD002A58B5 /* TAKAlertSample */;
-			targetProxy = F4181DEB1B65D0BE002A58B5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F4181DDE1B65D0BE002A58B5 /* Main.storyboard */ = {
@@ -538,7 +327,7 @@
 		};
 		F4181DF51B65D0BE002A58B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9AB50C1F57F3DE94FCF180D7 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 415BC7B55A6C466A9AF24709 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "TAKAlertSample/TAKAlertSample-PrefixHeader.pch";
@@ -550,47 +339,13 @@
 		};
 		F4181DF61B65D0BE002A58B5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 513E7119E994D0BEDBE0462F /* Pods.release.xcconfig */;
+			baseConfigurationReference = E60A142303D698FEF3C5A49F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "TAKAlertSample/TAKAlertSample-PrefixHeader.pch";
 				INFOPLIST_FILE = TAKAlertSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		F4181DF81B65D0BE002A58B5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TAKAlertSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TAKAlertSample.app/TAKAlertSample";
-			};
-			name = Debug;
-		};
-		F4181DF91B65D0BE002A58B5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TAKAlertSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TAKAlertSample.app/TAKAlertSample";
 			};
 			name = Release;
 		};
@@ -611,15 +366,6 @@
 			buildConfigurations = (
 				F4181DF51B65D0BE002A58B5 /* Debug */,
 				F4181DF61B65D0BE002A58B5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F4181DF71B65D0BE002A58B5 /* Build configuration list for PBXNativeTarget "TAKAlertSampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F4181DF81B65D0BE002A58B5 /* Debug */,
-				F4181DF91B65D0BE002A58B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

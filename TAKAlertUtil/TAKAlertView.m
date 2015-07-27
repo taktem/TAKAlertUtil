@@ -24,9 +24,10 @@
 
 #import "TAKAlertView.h"
 
-void (^clickButtonBlock)(UIAlertView*, NSInteger);
-
 @interface TAKAlertView()<UIAlertViewDelegate>
+
+/// ボタンコールバック保持用
+@property (copy, nonatomic) void (^clickButtonBlock)(id, NSInteger);
 
 /// Retainカウント保持用に、自分を強参照
 @property (strong, nonatomic) TAKAlertView *strongSelf;
@@ -45,14 +46,14 @@ void (^clickButtonBlock)(UIAlertView*, NSInteger);
             [self addButtonWithTitle: buttonTitle];
         }
         self.strongSelf = self;
-        clickButtonBlock = buttonHandler;
+        self.clickButtonBlock = buttonHandler;
     }
     return self;
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if(clickButtonBlock){
-        clickButtonBlock(alertView,buttonIndex);
+    if(self.clickButtonBlock){
+        self.clickButtonBlock(alertView,buttonIndex);
     }
 }
 
@@ -65,8 +66,6 @@ void (^clickButtonBlock)(UIAlertView*, NSInteger);
                                                      message:message
                                                 buttonTitles:buttonTitles
                                                buttonHandler:buttonHandler];
-
-    alert.strongSelf = alert;
     
     [alert show];
 }

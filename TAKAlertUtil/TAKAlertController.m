@@ -27,7 +27,7 @@
 @interface TAKAlertController ()
 
 /// ボタンコールバック保持用
-@property (copy, nonatomic) void (^clickButtonBlock)(UIAlertController*, NSInteger);
+@property (copy, nonatomic) void (^clickButtonBlock)(id, NSInteger);
 
 /// アラート表示のベースとなるWindow
 @property (strong, nonatomic) UIWindow *window;

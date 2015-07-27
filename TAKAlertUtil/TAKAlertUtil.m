@@ -29,11 +29,11 @@
 
 @interface TAKAlertUtil()
 
+/// ボタンコールバック保持用
+@property (copy, nonatomic) void (^clickButtonBlock)(id, NSInteger);
+
 /// Retainカウント保持用に、自分を強参照
 @property (strong, nonatomic) TAKAlertUtil *strongSelf;
-
-/// コールバック参照保持用
-@property (strong, nonatomic) id<RACSubscriber> subscriber;
 
 @end
 
@@ -48,8 +48,7 @@
  *  @param buttonIndex 押下されたボタンインデックス
  */
 - (void)alertCallBack:(id)alert clickedButtonAtIndex:(NSInteger)buttonIndex{
-    [self.subscriber sendNext:@(buttonIndex)];
-    [self.subscriber sendCompleted];
+    self.clickButtonBlock(self, buttonIndex);
 }
 
 #pragma mark - Control
@@ -61,12 +60,14 @@
  *  @param message      本文
  *  @param buttonTitles ボタンタイトル配列
  */
-+ (RACSignal *)showWithTitle:(NSString *)title
-                     message:(NSString *)message
-                buttonTitles:(NSArray *)buttonTitles {
-    
++ (void)showWithTitle:(NSString *)title
+              message:(NSString *)message
+         buttonTitles:(NSArray *)buttonTitles
+        buttonHandler:(void (^)(TAKAlertUtil *, NSInteger))buttonHandler {
     
     TAKAlertUtil *alert = [TAKAlertUtil new];
+    
+    alert.clickButtonBlock = buttonHandler;
     
     // 8.0以上はAlert Controllerを使う
     if ([UIAlertController class]) {
@@ -86,34 +87,22 @@
  *  @param title        タイトル
  *  @param message      メッセージ
  *  @param buttonTitles ボタンタイトル配列
- *
- *  @return RAC
  */
-- (RACSignal *)showAlertViewWithTitle:(NSString *)title
-                              message:(NSString *)message
-                         buttonTitles:(NSArray *)buttonTitles {
-    @weakify(self)
+- (void)showAlertViewWithTitle:(NSString *)title
+                       message:(NSString *)message
+                  buttonTitles:(NSArray *)buttonTitles {
     
     self.strongSelf = self;
+    
+    __weak typeof(self) weakSelf = self;
     [TAKAlertView showWithTitle:title
                         message:message
                    buttonTitles:buttonTitles
                   buttonHandler:^(UIAlertView *alertView, NSInteger index) {
-                      @strongify(self)
-                      [self alertCallBack:alertView clickedButtonAtIndex:index];
+                      [weakSelf alertCallBack:alertView clickedButtonAtIndex:index];
                       
-                      self.strongSelf = nil;
+                      weakSelf.strongSelf = nil;
                   }];
-    
-    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        @strongify(self)
-        self.subscriber = subscriber;
-        
-        return [RACDisposable disposableWithBlock:^{
-            @strongify(self)
-            self.subscriber = nil;
-        }];
-    }];
 }
 
 /**
@@ -122,34 +111,22 @@
  *  @param title        タイトル
  *  @param message      メッセージ
  *  @param buttonTitles ボタンタイトル配列
- *
- *  @return RAC
  */
-- (RACSignal *)showAlertControllerWithTitle:(NSString *)title
-                                    message:(NSString *)message
-                               buttonTitles:(NSArray *)buttonTitles {
-    @weakify(self)
+- (void)showAlertControllerWithTitle:(NSString *)title
+                             message:(NSString *)message
+                        buttonTitles:(NSArray *)buttonTitles {
     
     self.strongSelf = self;
-    [TAKAlertController showWithTitle:title
-                        message:message
-                   buttonTitles:buttonTitles
-                        buttonHandler:^(UIAlertController *alertController, NSInteger index) {
-                            @strongify(self)
-                            [self alertCallBack:alertController clickedButtonAtIndex:index];
-                            
-                            self.strongSelf = nil;
-                        }];
     
-    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        @strongify(self)
-        self.subscriber = subscriber;
-        
-        return [RACDisposable disposableWithBlock:^{
-            @strongify(self)
-            self.subscriber = nil;
-        }];
-    }];
+    __weak typeof(self) weakSelf = self;
+    [TAKAlertController showWithTitle:title
+                              message:message
+                         buttonTitles:buttonTitles
+                        buttonHandler:^(UIAlertController *alertController, NSInteger index) {
+                            [weakSelf alertCallBack:alertController clickedButtonAtIndex:index];
+                            
+                            weakSelf.strongSelf = nil;
+                        }];
 }
 
 @end
