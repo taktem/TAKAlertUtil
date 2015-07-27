@@ -39,10 +39,6 @@ DerivedData
 *.ipa
 *.xcuserstate
 
-# CocoaPod
-*/Pods/*
-*/Podfile.lock
-
 
 ### Xcode ###
 build
