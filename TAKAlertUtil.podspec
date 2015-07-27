@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'TAKAlertUtil/**/*.{h,m}'
   s.public_header_files = 'TAKAlertUtil/**/*.{h}'
-  s.dependency 'ReactiveCocoa', '~> 2.4.2'
+  s.dependency 'ReactiveCocoa', '~> 2.5'
 end
