@@ -20,8 +20,6 @@
 
 /* Begin PBXFileReference section */
 		041FA25D9403B22C458FA8FF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		415BC7B55A6C466A9AF24709 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		E60A142303D698FEF3C5A49F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F4181DD11B65D0BD002A58B5 /* TAKAlertSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TAKAlertSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4181DD51B65D0BD002A58B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4181DD61B65D0BD002A58B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,22 +58,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D13E3F7A5DE44760D695490A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				415BC7B55A6C466A9AF24709 /* Pods.debug.xcconfig */,
-				E60A142303D698FEF3C5A49F /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		F4181DC81B65D0BD002A58B5 = {
 			isa = PBXGroup;
 			children = (
 				F4181DD31B65D0BD002A58B5 /* TAKAlertSample */,
 				F4181DD21B65D0BD002A58B5 /* Products */,
 				D0B90789C7652EB105042F10 /* Frameworks */,
-				D13E3F7A5DE44760D695490A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -327,7 +315,6 @@
 		};
 		F4181DF51B65D0BE002A58B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 415BC7B55A6C466A9AF24709 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "TAKAlertSample/TAKAlertSample-PrefixHeader.pch";
@@ -339,7 +326,6 @@
 		};
 		F4181DF61B65D0BE002A58B5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E60A142303D698FEF3C5A49F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "TAKAlertSample/TAKAlertSample-PrefixHeader.pch";
