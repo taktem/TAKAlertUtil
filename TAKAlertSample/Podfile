@@ -2,9 +2,4 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '7.0'
 
-pod 'AFNetworking', '~> 2.5'
-pod 'SDWebImage', '~> 3.7'
-pod 'UICKeyChainStore', '~> 2.0'
-pod 'Mantle', '~> 2.0'
-pod 'FastImageCache', '~> 1.3'
-pod 'ZXingObjC', '~> 3.0'
+pod 'TAKAlertUtil', :podspec => 'https://raw.githubusercontent.com/taktem/TAKAlertUtil/master/TAKAlertUtil.podspec'
