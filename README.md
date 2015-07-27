@@ -1,0 +1,2 @@
+# TAKAlertUtil
+UIAlertViewとUIAlertControllerを、OS判別した上で分岐する
