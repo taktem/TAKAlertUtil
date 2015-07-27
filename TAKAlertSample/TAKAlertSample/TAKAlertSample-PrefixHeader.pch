@@ -11,5 +11,6 @@
 
 /** RAC **/
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveCocoa/EXTScope.h>
 
 #endif
