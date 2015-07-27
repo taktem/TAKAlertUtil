@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.name         = "TAKAlertUtil"
   s.version      = "0.2"
   s.summary      = "Determine by OSVer. The UIAlertView and UIAlertController"
-  s.license      = { :type => 'MIT', :file => 'LICENSE' }
+  s.license      = { :type => 'MIT', :file => 'LICENSE.txt' }
   s.homepage     = "https://github.com/taktem/TAKAlertUtil"
   s.author       = { "SOMTD" => "totem.kc[at]me.com" }
   s.source       = {
