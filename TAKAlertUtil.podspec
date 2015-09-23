@@ -16,13 +16,14 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/taktem/TAKAlertUtil.git", :tag => "#{s.version}" }
   s.requires_arc = true
   
-  s.subspec 'Objective-c' do ||
+  s.subspec 'Objective-c' do |ss|
     s.platform     = :ios, '7.0'
     s.source_files = 'TAKAlertUtil/**/*.{h,m}'
     s.public_header_files = 'TAKAlertUtil/**/*.{h}'
     s.dependency 'ReactiveCocoa', '~> 2.5'
   end
-  s.subspec 'Swift' do ||
+
+  s.subspec 'Swift' do |ss|
     s.platform     = :ios, '8.0'
     s.source_files = 'TAKAlertUtil/**/*.swift'
   end
