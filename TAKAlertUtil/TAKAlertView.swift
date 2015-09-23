@@ -8,9 +8,6 @@
 
 import UIKit
 
-import RxSwift
-import RxCocoa
-
 class TAKAlertView: NSObject {
     let alertView = UIAlertView()
     
@@ -20,18 +17,4 @@ class TAKAlertView: NSObject {
         buttonTitles: [String]) -> Observable<Int> {
         
     }
-    
-    
-    
-        /**
-        *  アラート表示
-        *
-        *  @param title        タイトル
-        *  @param message      本文
-        *  @param buttonTitles ボタンタイトル配列
-        */
-//        + (void)showWithTitle:(NSString *)title
-//    message:(NSString *)message
-//    buttonTitles:(NSArray *)buttonTitles
-//    buttonHandler:(void (^)(UIAlertView*alertView, NSInteger index))buttonHandler;
-//}
+}
