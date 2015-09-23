@@ -14,7 +14,7 @@ class TAKAlertView: NSObject {
     func showWithTitle(
         title title: String,
         message: String,
-        buttonTitles: [String]) -> Observable<Int> {
+        buttonTitles: [String]) {
         
     }
 }
