@@ -11,11 +11,11 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class TAKAlertView: NSObject {
+public class TAKAlertView: NSObject {
     
     typealias AlertCompleteBlock = (index: Int) -> Void
-    var alertCompleteBlock: AlertCompleteBlock?
-    var alertController :UIAlertController?
+    private var alertCompleteBlock: AlertCompleteBlock?
+    private var alertController :UIAlertController?
     private var strongSelf: TAKAlertView?
     
     private let alertWindow = UIWindow(frame: UIScreen.mainScreen().bounds)
@@ -86,7 +86,7 @@ class TAKAlertView: NSObject {
         
     }
     
-    class func show(
+    public class func show(
         title title: String,
         message: String!,
         buttonTitles: [String]) -> Observable<Int> {
