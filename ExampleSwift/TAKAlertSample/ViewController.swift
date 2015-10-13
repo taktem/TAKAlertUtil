@@ -22,6 +22,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func alertButtonTapped(sender: UIButton) {
-        
+        TAKAlertView.show(
+            title: "Title",
+            message: "Sample message.",
+            buttonTitles: ["OK", "Cancel"]
+        ).subscribeNext { index -> Void in
+            print(index)
+        }
     }
 }
