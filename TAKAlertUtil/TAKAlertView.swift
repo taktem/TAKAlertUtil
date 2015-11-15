@@ -76,14 +76,13 @@ public class TAKAlertView: NSObject {
                 self?.alertWindow.windowLevel = -1000
                 
                 observer.on(.Next(index))
-                observer.onComplete()
+                observer.onCompleted()
             }
             
             return AnonymousDisposable {
                 
             }
         }
-        
     }
     
     public class func show(
