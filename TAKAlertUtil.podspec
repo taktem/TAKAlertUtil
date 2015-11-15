@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name         = "TAKAlertUtil"
   s.platform     = :ios, '8.0'
-  s.version      = "2.0.5"
+  s.version      = "2.0.6"
   s.summary      = "Determine by OSVer. The UIAlertView and UIAlertController"
   s.license      = { :type => 'MIT', :file => 'LICENSE.txt' }
   s.homepage     = "https://github.com/taktem/TAKAlertUtil"
@@ -25,7 +25,6 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Objective-C' do |o|
-    o.platform     = :ios, '7.0'
     o.source_files = 'TAKAlertUtil/**/*.{h,m}'
     o.public_header_files = 'TAKAlertUtil/**/*.{h}'
     o.dependency 'ReactiveCocoa', '~> 2.5'

@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D6E6AA271DE4726563362BD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 760F8969BDB1272D1477D286 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		2D6E6AA271DE4726563362BD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 760F8969BDB1272D1477D286 /* Pods.framework */; };
 		F40BA89C1BA8FD5A0084B725 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40BA89B1BA8FD5A0084B725 /* AppDelegate.swift */; };
 		F40BA89E1BA8FD5A0084B725 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40BA89D1BA8FD5A0084B725 /* ViewController.swift */; };
 		F40BA8A11BA8FD5A0084B725 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40BA89F1BA8FD5A0084B725 /* Main.storyboard */; };
 		F40BA8A31BA8FD5A0084B725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F40BA8A21BA8FD5A0084B725 /* Assets.xcassets */; };
 		F40BA8A61BA8FD5A0084B725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40BA8A41BA8FD5A0084B725 /* LaunchScreen.storyboard */; };
-		F40BA8B51BA904CA0084B725 /* TAKAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40BA8B41BA904CA0084B725 /* TAKAlertView.swift */; settings = {ASSET_TAGS = (); }; };
+		F40BA8B51BA904CA0084B725 /* TAKAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40BA8B41BA904CA0084B725 /* TAKAlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */

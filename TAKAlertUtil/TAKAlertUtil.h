@@ -25,7 +25,7 @@
 #import <Foundation/Foundation.h>
 
 /** RAC **/
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "ReactiveCocoa.h"
 
 @interface TAKAlertUtil : NSObject
 
