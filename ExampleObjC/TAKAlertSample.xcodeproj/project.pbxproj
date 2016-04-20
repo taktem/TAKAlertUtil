@@ -7,21 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18E3FD7CB88F38AEB0870919 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 041FA25D9403B22C458FA8FF /* libPods.a */; };
+		3882FDB11C8D0DFBD0EFFDC1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC885702634B300ED6C2F1F /* Pods.framework */; };
 		F4181DD71B65D0BD002A58B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4181DD61B65D0BD002A58B5 /* main.m */; };
 		F4181DDA1B65D0BD002A58B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4181DD91B65D0BD002A58B5 /* AppDelegate.m */; };
 		F4181DDD1B65D0BD002A58B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4181DDC1B65D0BD002A58B5 /* ViewController.m */; };
 		F4181DE01B65D0BE002A58B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4181DDE1B65D0BE002A58B5 /* Main.storyboard */; };
 		F4181DE21B65D0BE002A58B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4181DE11B65D0BE002A58B5 /* Images.xcassets */; };
 		F4181DE51B65D0BE002A58B5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4181DE31B65D0BE002A58B5 /* LaunchScreen.xib */; };
-		F48C55F61BF8FDA000B7916F /* TAKAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48C55F11BF8FDA000B7916F /* TAKAlertController.m */; };
-		F48C55F71BF8FDA000B7916F /* TAKAlertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F48C55F31BF8FDA000B7916F /* TAKAlertUtil.m */; };
-		F48C55F81BF8FDA000B7916F /* TAKAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F48C55F51BF8FDA000B7916F /* TAKAlertView.m */; };
+		F4A49FC11C7599D00059A7C7 /* TAKAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A49FBE1C7599D00059A7C7 /* TAKAlertController.m */; };
+		F4A49FC21C7599D00059A7C7 /* TAKAlertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A49FC01C7599D00059A7C7 /* TAKAlertUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		041FA25D9403B22C458FA8FF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FFBD4BF8B2AB3A0EAE3843 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5DC885702634B300ED6C2F1F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E38F5B868F775D75E3EBC6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F4181DD11B65D0BD002A58B5 /* TAKAlertSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TAKAlertSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4181DD51B65D0BD002A58B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,12 +32,10 @@
 		F4181DDF1B65D0BE002A58B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4181DE11B65D0BE002A58B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F4181DE41B65D0BE002A58B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		F48C55F01BF8FDA000B7916F /* TAKAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAKAlertController.h; path = "Objective-C/TAKAlertController.h"; sourceTree = "<group>"; };
-		F48C55F11BF8FDA000B7916F /* TAKAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAKAlertController.m; path = "Objective-C/TAKAlertController.m"; sourceTree = "<group>"; };
-		F48C55F21BF8FDA000B7916F /* TAKAlertUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAKAlertUtil.h; path = "Objective-C/TAKAlertUtil.h"; sourceTree = "<group>"; };
-		F48C55F31BF8FDA000B7916F /* TAKAlertUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAKAlertUtil.m; path = "Objective-C/TAKAlertUtil.m"; sourceTree = "<group>"; };
-		F48C55F41BF8FDA000B7916F /* TAKAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAKAlertView.h; path = "Objective-C/TAKAlertView.h"; sourceTree = "<group>"; };
-		F48C55F51BF8FDA000B7916F /* TAKAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAKAlertView.m; path = "Objective-C/TAKAlertView.m"; sourceTree = "<group>"; };
+		F4A49FBD1C7599D00059A7C7 /* TAKAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAKAlertController.h; sourceTree = "<group>"; };
+		F4A49FBE1C7599D00059A7C7 /* TAKAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAKAlertController.m; sourceTree = "<group>"; };
+		F4A49FBF1C7599D00059A7C7 /* TAKAlertUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAKAlertUtil.h; sourceTree = "<group>"; };
+		F4A49FC01C7599D00059A7C7 /* TAKAlertUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAKAlertUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18E3FD7CB88F38AEB0870919 /* libPods.a in Frameworks */,
+				3882FDB11C8D0DFBD0EFFDC1 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +53,7 @@
 		D0B90789C7652EB105042F10 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				041FA25D9403B22C458FA8FF /* libPods.a */,
+				5DC885702634B300ED6C2F1F /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,12 +104,10 @@
 		F4181E0A1B65D1C2002A58B5 /* TAKAlertUtil */ = {
 			isa = PBXGroup;
 			children = (
-				F48C55F01BF8FDA000B7916F /* TAKAlertController.h */,
-				F48C55F11BF8FDA000B7916F /* TAKAlertController.m */,
-				F48C55F21BF8FDA000B7916F /* TAKAlertUtil.h */,
-				F48C55F31BF8FDA000B7916F /* TAKAlertUtil.m */,
-				F48C55F41BF8FDA000B7916F /* TAKAlertView.h */,
-				F48C55F51BF8FDA000B7916F /* TAKAlertView.m */,
+				F4A49FBD1C7599D00059A7C7 /* TAKAlertController.h */,
+				F4A49FBE1C7599D00059A7C7 /* TAKAlertController.m */,
+				F4A49FBF1C7599D00059A7C7 /* TAKAlertUtil.h */,
+				F4A49FC01C7599D00059A7C7 /* TAKAlertUtil.m */,
 			);
 			name = TAKAlertUtil;
 			path = ../../TAKAlertUtil;
@@ -262,12 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F48C55F81BF8FDA000B7916F /* TAKAlertView.m in Sources */,
 				F4181DDD1B65D0BD002A58B5 /* ViewController.m in Sources */,
 				F4181DDA1B65D0BD002A58B5 /* AppDelegate.m in Sources */,
-				F48C55F71BF8FDA000B7916F /* TAKAlertUtil.m in Sources */,
+				F4A49FC21C7599D00059A7C7 /* TAKAlertUtil.m in Sources */,
 				F4181DD71B65D0BD002A58B5 /* main.m in Sources */,
-				F48C55F61BF8FDA000B7916F /* TAKAlertController.m in Sources */,
+				F4A49FC11C7599D00059A7C7 /* TAKAlertController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

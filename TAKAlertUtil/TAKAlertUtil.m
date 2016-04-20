@@ -24,7 +24,6 @@
 
 #import "TAKAlertUtil.h"
 
-#import "TAKAlertView.h"
 #import "TAKAlertController.h"
 
 @interface TAKAlertUtil()
@@ -54,8 +53,7 @@
 
 #pragma mark - Control
 /**
- *  アラート表示、両OS共通部。
- *  ここからiOS8前後で分岐し、UIAlertViewかUIAlertControllerかを判別する
+ *  アラート表示
  *
  *  @param title        タイトル
  *  @param message      本文
@@ -67,57 +65,13 @@
     
     
     TAKAlertUtil *alert = [TAKAlertUtil new];
-    
-    // 8.0以上はAlert Controllerを使う
-    if ([UIAlertController class]) {
-        return [alert showAlertControllerWithTitle:title
-                                           message:message
-                                      buttonTitles:buttonTitles];
-    } else {
-        return [alert showAlertViewWithTitle:title
-                                     message:message
-                                buttonTitles:buttonTitles];
-    }
+    return [alert showAlertControllerWithTitle:title
+                                       message:message
+                                  buttonTitles:buttonTitles];
 }
 
 /**
- *  iOS8未満 AlertViewを使う
- *
- *  @param title        タイトル
- *  @param message      メッセージ
- *  @param buttonTitles ボタンタイトル配列
- *
- *  @return RAC
- */
-- (RACSignal *)showAlertViewWithTitle:(NSString *)title
-                              message:(NSString *)message
-                         buttonTitles:(NSArray *)buttonTitles {
-    @weakify(self)
-    
-    self.strongSelf = self;
-    [TAKAlertView showWithTitle:title
-                        message:message
-                   buttonTitles:buttonTitles
-                  buttonHandler:^(UIAlertView *alertView, NSInteger index) {
-                      @strongify(self)
-                      [self alertCallBack:alertView clickedButtonAtIndex:index];
-                      
-                      self.strongSelf = nil;
-                  }];
-    
-    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        @strongify(self)
-        self.subscriber = subscriber;
-        
-        return [RACDisposable disposableWithBlock:^{
-            @strongify(self)
-            self.subscriber = nil;
-        }];
-    }];
-}
-
-/**
- *  iOS8移行 AlertControllerを使う
+ *  AlertController
  *
  *  @param title        タイトル
  *  @param message      メッセージ
@@ -129,7 +83,6 @@
                                     message:(NSString *)message
                                buttonTitles:(NSArray *)buttonTitles {
     @weakify(self)
-    
     self.strongSelf = self;
     [TAKAlertController showWithTitle:title
                               message:message

@@ -9,25 +9,15 @@
 Pod::Spec.new do |s|
   s.name         = "TAKAlertUtil"
   s.platform     = :ios, '8.0'
-  s.version      = "2.0.6"
-  s.summary      = "Determine by OSVer. The UIAlertView and UIAlertController"
+  s.version      = "2.1"
+  s.summary      = "UIAlertController Support"
   s.license      = { :type => 'MIT', :file => 'LICENSE.txt' }
   s.homepage     = "https://github.com/taktem/TAKAlertUtil"
-  s.author       = { "SOMTD" => "totem.kc[at]me.com" }
+  s.author       = { "SOMTD" => "nishimura[at]taktem.com" }
   s.source       = { :git => "https://github.com/taktem/TAKAlertUtil.git", :tag => "#{s.version}" }
   s.requires_arc = true
   
-  s.subspec 'Swift' do |w|
-    w.source_files = 'TAKAlertUtil/Swift/**/*.swift'
-    w.dependency 'RxSwift', '~> 2.0.0-beta.2'
-    w.dependency 'RxCocoa', '~> 2.0.0-beta.2'
-    w.dependency 'RxBlocking', '~> 2.0.0-beta.2'
-  end
-
-  s.subspec 'Objective-C' do |o|
-    o.source_files = 'TAKAlertUtil/Objective-C/**/*.{h,m}'
-    o.public_header_files = 'TAKAlertUtil/Objective-C/**/*.{h}'
-    o.dependency 'ReactiveCocoa', '~> 2.5'
-  end
-
+  s.source_files = 'TAKAlertUtil/**/*.{h,m}'
+  s.public_header_files = 'TAKAlertUtil/**/*.{h}'
+  s.dependency 'ReactiveCocoa', '~> 4.1.0'
 end
